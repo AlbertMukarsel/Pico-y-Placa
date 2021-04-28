@@ -9,7 +9,7 @@ testDateData=[
     ("05-12-2000","Date",True),
     ("11-11-1200","Date",False),
     ("11-11/1987","Date",False),
-    ("11-11-1987","Time",True),
+    ("11-11-1987","Time",False),
     ("1-11-1987","Date",False),
     ("30-15-1987","Date",False),
     ("30-02-2020","Date", False)
@@ -17,5 +17,5 @@ testDateData=[
 
 @pytest.mark.parametrize("inputA, inputB, expectedResult", testDateData)
 
-def test_dateValidation(inputA, inputB, expectedResult)
+def test_dateValidation(inputA, inputB, expectedResult):
     assert checkInput(inputA, inputB) == expectedResult

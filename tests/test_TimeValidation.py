@@ -14,5 +14,5 @@ testTimeData=[
 
 @pytest.mark.parametrize("inputA, inputB, expectedResult", testTimeData)
 
-def test_timeValidation(inputA, inputB, expectedResult)
+def test_timeValidation(inputA, inputB, expectedResult):
     assert checkInput(inputA, inputB) == expectedResult    
