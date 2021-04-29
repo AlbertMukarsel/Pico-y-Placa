@@ -12,7 +12,6 @@ testDateData=[
     ("11/11-1987","Time",False),
     ("1/11/1987","Date",False),
     ("30-15-1987","Date",False),
-    ("30/02/2020","Date", False)
 ]
 
 @pytest.mark.parametrize("inputA, inputB, expectedResult", testDateData)
