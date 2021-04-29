@@ -2,6 +2,13 @@ from datetime import datetime
 import utilities
 
 def restrictionDays(date, licensePlate):
+    """
+    Each day is represented by a number, Monday=0...Sunday-6
+    during weekdays, according to each day, if a license plate has
+    one of those digits as its last one, is subject to the Pico y Placa restrictions
+    I.E: on Mondays, a car with its license plate ending on 1 or 2
+    is subject to restrictions
+    """
     plateNumbersPerDay={
         0:[1,2],
         1:[3,4],
@@ -15,8 +22,8 @@ def restrictionDays(date, licensePlate):
     if day == 6 or day == 7:
         return False
     else: 
-        dayRestrictions=plateNumbersPerDay[day]
-        lastDigit=licensePlate[-1]
+        dayRestrictions=plateNumbersPerDay[day] #Gets the plate's last digits that cannot be on the road acording to day 
+        lastDigit=licensePlate[-1] #Get the input plate's last digit to check if is allowed or not to be on the road
         if lastDigit in dayRestrictions:
             return True
         else:
@@ -35,5 +42,6 @@ def restrictionHours(time):
         return True
     if PMRestrictionStartTime <= hour <= PMRestrictionEndTime:
         return True
-    
+
+    return False
 

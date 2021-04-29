@@ -1,7 +1,5 @@
 from inputValidations import checkInput
 from car import Car
-<<<<<<< HEAD
-=======
 
 validatedLicense = False
 validatedDate = False
@@ -9,7 +7,7 @@ validatedTime = False
 
 while(not validatedLicense):
     licensePlate = input("Enter you license number plate: ")
-    validated=checkInput(licensePlate,"License Plate")
+    validatedLicense=checkInput(licensePlate,"License Plate")
 
 while(not validatedDate):
     date = input("Enter the date you want to check (format DD/MM/YYYY): ")
@@ -17,29 +15,7 @@ while(not validatedDate):
 
 while(not validatedTime):
     time = input("Enter the time you want to check (format HH:mm): ")
-    validatedTime=checkInput(date,"Time")
-
-carBeenChecked=Car(licensePlate)
-carBeenChecked.hasRestriction(date, time)
-
-print("Thank you for using Pico y Placa predictor")
->>>>>>> 84861fefdbf1a58ac3cf162a642dcf92ae8a0471
-
-validatedLicense = False
-validatedDate = False
-validatedTime = False
-
-while(not validatedLicense):
-    licensePlate = input("Enter you license number plate: ")
-    validated=checkInput(licensePlate,"License Plate")
-
-while(not validatedDate):
-    date = input("Enter the date you want to check (format DD/MM/YYYY): ")
-    validatedDate=checkInput(date, "Date")
-
-while(not validatedTime):
-    time = input("Enter the time you want to check (format HH:mm): ")
-    validatedTime=checkInput(date,"Time")
+    validatedTime=checkInput(time,"Time")
 
 carBeenChecked=Car(licensePlate)
 carBeenChecked.hasRestriction(date, time)
