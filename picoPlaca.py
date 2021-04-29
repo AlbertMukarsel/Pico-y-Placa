@@ -1,5 +1,5 @@
 from inputValidations import checkInput
-import car
+from car import Car
 
 validatedLicense = False
 validatedDate = False
@@ -7,10 +7,10 @@ validatedTime = False
 
 while(not validatedLicense):
     licensePlate = input("Enter you license number plate: ")
-    validated=checkInput(licensePlate, "License Plate")
+    validated=checkInput(licensePlate,"License Plate")
 
 while(not validatedDate):
-    date = input("Enter the date you want to check (format DD-MM-YYYY): ")
+    date = input("Enter the date you want to check (format DD/MM/YYYY): ")
     validatedDate=checkInput(date, "Date")
 
 while(not validatedTime):

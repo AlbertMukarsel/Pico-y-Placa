@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 def getRestrictionHours(Hours):
     restrictionStartTime=datetime.strptime(Hours[0],"%H:%M").time()
