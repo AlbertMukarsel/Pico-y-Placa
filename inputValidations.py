@@ -12,6 +12,7 @@ def checkInput(inputReceived, inputType):
     dateRegEx=re.compile("^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19|20)\d\d$")
     """
     Date will be in the format DD/MM/YYYY
+    does not exclude February 30 or 31
     """
     timeRegEx=re.compile("^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$")
     """
