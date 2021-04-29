@@ -19,16 +19,14 @@ def restrictionDays(date, licensePlate):
         6:[]}
 
     day=datetime.strptime(date, '%d/%m/%Y').weekday()
-    if day == 6 or day == 7:
+    if day == 5 or day == 6:
         return False
     else: 
         dayRestrictions=plateNumbersPerDay[day] #Gets the plate's last digits that cannot be on the road acording to day 
-        lastDigit=licensePlate[-1] #Get the input plate's last digit to check if is allowed or not to be on the road
-        if lastDigit in dayRestrictions:
+        lastDigit=int(licensePlate[-1]) #Get the input plate's last digit to check if is allowed or not to be on the road
+        if (lastDigit in dayRestrictions):
             return True
-        else:
-            return False
-
+    return False
 
 def restrictionHours(time):
     restrictedHours={
@@ -42,6 +40,6 @@ def restrictionHours(time):
         return True
     if PMRestrictionStartTime <= hour <= PMRestrictionEndTime:
         return True
-
+    #if the specified time is not part of the restrictions schedule, it returns False
     return False
 

@@ -4,7 +4,6 @@ from car import Car
 validatedLicense = False
 validatedDate = False
 validatedTime = False
-
 while(not validatedLicense):
     licensePlate = input("Enter you license number plate: ")
     validatedLicense=checkInput(licensePlate,"License Plate")
