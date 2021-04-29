@@ -9,9 +9,9 @@ def checkInput(inputReceived, inputType):
         AAA-####
         AA-####
     """ 
-    dateRegEx=re.compile("^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$")
+    dateRegEx=re.compile("^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(19|20)\d\d$")
     """
-    Date will be in the format DD/MM/YYYY & DD-MM-YYYY
+    Date will be in the format DD/MM/YYYY
     """
     timeRegEx=re.compile("^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$")
     """
