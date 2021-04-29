@@ -7,7 +7,7 @@ validatedTime = False
 
 while(not validatedLicense):
     licensePlate = input("Enter you license number plate: ")
-    validated=checkInput(licensePlate,"License Plate")
+    validatedLicense=checkInput(licensePlate,"License Plate")
 
 while(not validatedDate):
     date = input("Enter the date you want to check (format DD/MM/YYYY): ")
@@ -15,10 +15,9 @@ while(not validatedDate):
 
 while(not validatedTime):
     time = input("Enter the time you want to check (format HH:mm): ")
-    validatedTime=checkInput(date,"Time")
+    validatedTime=checkInput(time,"Time")
 
 carBeenChecked=Car(licensePlate)
 carBeenChecked.hasRestriction(date, time)
 
 print("Thank you for using Pico y Placa predictor")
-
