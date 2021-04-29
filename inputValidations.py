@@ -3,7 +3,7 @@ import re #RegEx built-in library, imported to validate the license plate number
 def checkInput(inputReceived, inputType):
     inputIsCorrect=False
     #region Regular Expressions 
-    licensePlateRegEx=re.compile("^[A-Za-z]{2,3}-[0-9]{4}$")
+    licensePlateRegEx=re.compile("^([A-Z]{2,3}|[a-z]{2,3})-[0-9]{4}$")
     """
     Ecuadorian license plate numbers could come in the next formats:
         AAA-####
@@ -19,17 +19,17 @@ def checkInput(inputReceived, inputType):
     """
     #endregion
     #region Validations
-    if (inputExpected == "License Plate"):
+    if (inputType == "License Plate"):
         if licensePlateRegEx.match(inputType):
             inputIsCorrect=True
         else:
             print("Invalid license plate number, please try again")
-    elif(inputExpected == "Date"):
+    elif(inputType == "Date"):
         if dateRegEx.match(inputType):
             inputIsCorrect=True
         else:
             print("Invalid date, please try again")
-    elif(inputExpected== "Time"):
+    elif(inputType == "Time"):
         if timeRegEx.match(inputType):
             inputIsCorrect=True
         else:
