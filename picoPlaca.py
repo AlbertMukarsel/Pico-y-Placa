@@ -20,4 +20,4 @@ while(not validatedTime):
 carBeenChecked=Car(licensePlate)
 carBeenChecked.hasRestriction(date, time)
 
-print("Thank you for using Pico y Placa predictor")
+print("Thank you for using Pico y Placa predictor!!")
